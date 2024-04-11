@@ -26,6 +26,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import NestedViews from './components/NestedViews';
+import FBDeep from './components/FBDeep';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -65,68 +66,8 @@ function App(): JSX.Element {
   };
 
   return (
-    // <SafeAreaView style={backgroundStyle}>
-    //   <StatusBar
-    //     barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-    //     backgroundColor={backgroundStyle.backgroundColor}
-    //   />
-    //   <ScrollView
-    //     contentInsetAdjustmentBehavior="automatic"
-    //     style={backgroundStyle}>
-    //     <Header />
-    //     <View
-    //       style={{
-    //         backgroundColor: isDarkMode ? Colors.black : Colors.white,
-    //       }}>
-    //       <Section title="Step One">
-    //         Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-    //         screen and then come back to see your edits.
-    //       </Section>
-    //       <Section title="See Your Changes">
-    //         <ReloadInstructions />
-    //       </Section>
-    //       <Section title="Debug">
-    //         <DebugInstructions />
-    //       </Section>
-    //       <Section title="Learn More">
-    //         Read the docs to discover what to do next:
-    //       </Section>
-    //       <LearnMoreLinks />
-    //     </View>
-    //   </ScrollView>
-    // </SafeAreaView>
-
-    // <View style={styles.container}>
-    //   <View>
-    //     <Text
-    //       style={styles.dummyText}>
-    //       Another piece of Text
-    //     </Text>
-    //   </View>
-    //   <Text
-    //     style={styles.dummyText}>
-    //     Hello World11!
-    //   </Text>
-    //   <Button title="Tap me!"></Button>
-    // </View>
-    <NestedViews />
+    <FBDeep />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  dummyText: {
-    fontWeight: 'bold',
-    margin: 16,
-    borderWidth: 1,
-    borderColor: 'blue',
-    padding: 16,
-  },
-});
 
 export default App;
