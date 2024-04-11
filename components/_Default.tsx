@@ -109,7 +109,9 @@ function DefaultApp(): JSX.Element {
     //   </Text>
     //   <Button title="Tap me!"></Button>
     // </View>
-    <NestedViews />
+    <SafeAreaView style={backgroundStyle}>
+      <NestedViews />
+    </SafeAreaView>
   );
 }
 

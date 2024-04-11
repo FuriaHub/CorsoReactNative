@@ -22,7 +22,7 @@ function NestedViews(): JSX.Element {
         <TextInput style={styles.textInput} placeholder='Your course goal!' />
         <Button title="Add Goal" />
       </View>
-      <View>
+      <View style={styles.goalsContainer}>
         <Text>List of Goals</Text>
       </View>
     </View>
@@ -31,19 +31,29 @@ function NestedViews(): JSX.Element {
 
 const styles = StyleSheet.create({
   appContainer: {
-    padding: 50,
+    flex:1,
+    paddingTop: 50,
+    paddingHorizontal: 16,
   },
   inputContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingBottom: 24,
+    borderBottomWidth: 1,
+    borderBottomColor: '#cccccc',
+    flex: 1
   },
   textInput: {
     borderWidth: 1,
-    borderColor: 'red',
-    width: '80%',
+    borderColor: '#cccccc',
+    width: '70%',
     marginRight: 8,
-    padding: 18
+    padding: 8
   },
+  goalsContainer: {
+    flex: 3
+  }
 });
 
 export default NestedViews;
