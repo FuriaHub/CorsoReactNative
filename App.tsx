@@ -25,13 +25,14 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import NestedViews from './components/NestedViews';
+import NestedViews from './components/GoalApp';
 import FBDeep from './components/FBDeep';
+import GoalApp from './components/GoalApp';
 
 function App(): JSX.Element {
 
   return (
-    <NestedViews />
+    <GoalApp />
   );
 }
 
