@@ -14,6 +14,7 @@ function GoalApp(): JSX.Element {
       ...currGoals,
       {text: newGoalText, id: Math.random().toString()},
     ]);
+    onDismissModal();
   };
 
   const onDelGoalHandler = (id) => {
@@ -22,15 +23,19 @@ function GoalApp(): JSX.Element {
     );
   };
 
-  const onSetModalVisible = () => {
+  const onShowModal = () => {
     setModalVisible(true);
+  }
+
+  const onDismissModal = () => {
+    setModalVisible(false);
   }
 
   return (
 
     <View style={styles.appContainer}>
-      <Button title="Aggiungi un goal" color="#5e0acc" onPress={onSetModalVisible} />
-      <GoalInput onAddGoalHandler={addGoalHandler} visible={modalVisible}/>
+      <Button title="Aggiungi un goal" color="#5e0acc" onPress={onShowModal} />
+      <GoalInput onAddGoalHandler={addGoalHandler} onDismissModal={onDismissModal} visible={modalVisible}/>
       <View style={styles.goalsContainer}>
         <FlatList
           data={goals}
